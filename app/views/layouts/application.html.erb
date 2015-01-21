@@ -26,10 +26,25 @@
 			<%= link_to 'About', '#' %> 
 		</div>
 	</header>
-<hr />
-<br class="clear" />
 
-<%= yield %>
+	<hr />
+	<br class="clear" />
+
+	<div class="container">
+		<%= yield %>
+	</div>
+
+  	<div class="footer">
+    	<div class="container">
+      		<div class="col-xs-6">
+        		<%= link_to 'Tell us about your SF!!', '#', :class => 'next-quote' %>
+      		</div>
+      		<div class="col-xs-6 footer-blurb">
+       			Learning how to code in San Francisco, CA with <a href="http://thefirehoseproject.com">TheFirehoseProject</a><br />
+        		You can learn to code with me - <a href="http://thefirehoseproject.com">here</a>
+      		</div>
+    	</div>
+  	</div>
 
 </body>
 </html>
