@@ -9,20 +9,22 @@
 <body>
 	<header>
 		<div class="col-xs-3">
-			<div class="circle">
-			  <br />
-			  SF
-			  <br />
-			  is 
-			  <br />
-			  Fun-kay!
-			</div>
+			<%= link_to root_path, :class => 'logo' do %>
+				<div class="circle">
+				  <br />
+				  SF
+				  <br />
+				  is 
+				  <br />
+				  Fun-kay!
+				</div>
+			<% end %>
 		</div>
 		<div class="col-xs-4 slogan">
 			Splurting out true-ism about life in San Francisco.
 		</div>
 		<div class="col-xs-5 links">
-			<%= link_to 'Contribute', '#' %>
+			<%= link_to 'Contribute', new_quote_path %>
 			<%= link_to 'About', '#' %> 
 		</div>
 	</header>
@@ -37,7 +39,7 @@
   	<div class="footer">
     	<div class="container">
       		<div class="col-xs-6">
-        		<%= link_to 'Tell us about your SF!!', '#', :class => 'next-quote' %>
+        		<%= link_to 'Tell us about your SF!!', root_path, :class => 'next-quote' %>
       		</div>
       		<div class="col-xs-6 footer-blurb">
        			Learning how to code in San Francisco, CA with <a href="http://thefirehoseproject.com">TheFirehoseProject</a><br />
