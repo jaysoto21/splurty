@@ -14,6 +14,13 @@ class QuotesController < ApplicationController
   def about
   end
 
+  def show
+    @quote = Quote.where(:id => params[:id]).first
+    if @quote.blank?
+      render :text => 'not found', :status => :not_found
+    end
+end
+
 	private
 
 	def quote_params
