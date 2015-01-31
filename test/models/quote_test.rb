@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class QuoteTest < ActiveSupport::TestCase
- 
- test 'unique_tag' do 
- 	quote = Quote.create(:author => 'Jay Soto', :saying => "Trying to learn to code WELL, is very difficult...")
- 	expected = 'JS#' + quote.id.to_s
- 	actual = quote.unique_tag
- 	assert_equal expected, actual
- end
- 
+
+  test "unique_tag" do 
+    quote = FactoryGirl.create(:quote, :author => 'Jay Soto')
+    expected = 'JS#' + quote.id.to_s
+    actual = quote.unique_tag
+    assert_equal expected, actual
+  end
+
 end
